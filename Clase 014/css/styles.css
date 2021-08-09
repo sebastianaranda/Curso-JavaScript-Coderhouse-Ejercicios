@@ -1,0 +1,692 @@
+/*---------- RESET DE CSS ----------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ---------- TERMINA RESET DE CSS ---------- */
+/* ---------- FONTS ---------- */
+@font-face {
+  font-family: "bluu";
+  src: url("../fonts/bluunext-bold-webfont.woff2") format("woff2"), url("../fonts/bluunext-bold-webfont.woff") format("woff"), url("../fonts/bluunext-bold.ttf") format("truetype"), url("../fonts/bluunext-bold-webfont.svg#bluu_nextbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'bluu-italic';
+  src: url("../fonts/bluunext-bolditalic-webfont.woff2") format("woff2"), url("../fonts/bluunext-bolditalic-webfont.woff") format("woff"), url("../fonts/bluunext-bolditalic.ttf") format("truetype"), url("../fonts/bluunext-bolditalic-webfont.svg#bluu_nextbold_italic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'bluu-nexttitling';
+  src: url("../fonts/BluuNext-Titling.ttf") format("truetype"), url("../fonts/bluunext-titling.woff2") format("woff2"), url("../fonts/bluunext-titling.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MasonSans";
+  src: url("../fonts/MasonSansRegular.woff2") format("woff2"), url("../fonts/MasonSansRegular.woff") format("woff"), url("../fonts/MasonSansRegular.svg") format("svg;");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap; }
+
+/* ---------- TERMINA FONTS ---------- */
+/* ---------- COLORES ---------- */
+/* ---------- TERMINA COLORES ---------- */
+/* ---------- PARTICULAS FONDO ---------- */
+html, body {
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  font-size: 10px;
+  cursor: url("../images/assets/broom_cursor_white.png") 32 1, auto; }
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%; }
+
+#particles-js {
+  background-image: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%; }
+
+/* ---------- TERMINA PARTICULAS FONDO ---------- */
+.nav {
+  width: 100%;
+  height: 180px;
+  background-image: url("../images/assets/smoke.jpg");
+  background-color: #00020a;
+  position: fixed;
+  top: 0;
+  opacity: .65;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  mix-blend-mode: color-dodge;
+  align-items: center;
+  justify-content: end;
+  z-index: 1; }
+
+main {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 100px);
+  z-index: 1; }
+  main .welcomeLogo {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 60px; }
+    main .welcomeLogo__image {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto; }
+  main .btn__content {
+    margin: auto;
+    width: max-content;
+    margin-top: 100px; }
+
+.btn__enter {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  color: #343534;
+  background-color: #f4b223;
+  font-size: 19px;
+  line-height: 22px;
+  padding: 8px 7px;
+  min-width: 134px;
+  margin: 0 30px 20px 30px;
+  border: 0;
+  box-sizing: border-box;
+  text-transform: uppercase; }
+  .btn__enter::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    top: 0;
+    border-top: 19px solid transparent;
+    border-right: 19px solid #f4b223;
+    border-bottom: 19px solid transparent; }
+  .btn__enter::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    top: 0;
+    border-top: 19px solid transparent;
+    border-left: 19px solid #f4b223;
+    border-bottom: 19px solid transparent; }
+  .btn__enter:hover {
+    color: #fcf5e7;
+    background-color: #4a2b10; }
+    .btn__enter:hover::before {
+      border-right-color: #4a2b10; }
+    .btn__enter:hover::after {
+      border-left-color: #4a2b10; }
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.btn--border {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -1px;
+  right: -1px;
+  border-top: 2px solid #f4b223;
+  border-bottom: 2px solid #f4b223; }
+  .btn--border .left {
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    overflow: hidden;
+    left: -24px;
+    width: 24px; }
+    .btn--border .left .square {
+      left: 7px; }
+  .btn--border .right {
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    overflow: hidden;
+    right: -24px;
+    width: 24px; }
+    .btn--border .right .square {
+      right: 18px; }
+  .btn--border .square {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    width: 27px; }
+    .btn--border .square::before {
+      display: block;
+      content: " ";
+      border: 2px solid #f4b223;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+      width: 38px;
+      height: 38px; }
+
+.btn--lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .btn--lines::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    right: 100%;
+    margin-right: 33px;
+    width: 100px;
+    height: 3px;
+    background-image: url("../images/gold-line.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: #f4b223; }
+  .btn--lines::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    left: 100%;
+    margin-left: 33px;
+    width: 100px;
+    height: 3px;
+    background-image: url("../images/gold-line.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+
+.houses {
+  text-align: center;
+  display: none; }
+  .houses__wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 40px; }
+  .houses__header {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "empty empty logo logo logo logo logo logo logo logo logout logout";
+    align-items: center;
+    margin-top: 15px; }
+    .houses__header--icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 140px;
+      height: 115px;
+      background-image: url("../images/assets/hogwarts-crest-dark.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      grid-area: logo;
+      margin: 0 auto; }
+    .houses__header__logout {
+      grid-area: logout;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .houses__header__logout--texto {
+        font-family: "Bluu", serif;
+        font-size: 18px;
+        color: #f4b223;
+        margin-right: 15px;
+        text-decoration: none;
+        cursor: url("../images/assets/broom_cursor.png") 32 1, auto; }
+  .houses__title {
+    position: relative;
+    text-align: center;
+    margin: 15px auto 50px;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+    font-family: "Bluu", serif;
+    color: #fcf5e7; }
+    .houses__title::before {
+      content: '';
+      position: absolute;
+      width: calc(50% - 300px);
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      height: 3px;
+      -webkit-mask-image: url("../images/assets/brown-line.svg");
+      mask-image: url("../images/assets/brown-line.svg");
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: #fcf5e7;
+      left: 0; }
+    .houses__title::after {
+      content: '';
+      position: absolute;
+      width: calc(50% - 300px);
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      height: 3px;
+      -webkit-mask-image: url("../images/assets/brown-line.svg");
+      mask-image: url("../images/assets/brown-line.svg");
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: #fcf5e7;
+      right: 0; }
+  .houses__container {
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "houseA houseB houseC houseD";
+    column-gap: 15px; }
+    .houses__container .houseA {
+      grid-area: houseA;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseB {
+      grid-area: houseB;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseC {
+      grid-area: houseC;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseD {
+      grid-area: houseD;
+      max-width: none;
+      max-height: none; }
+
+.house {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fcf5e7; }
+  .house:hover {
+    cursor: url("../images/assets/broom_cursor.png") 32 1, auto; }
+  .house:hover .house__gradient {
+    display: block; }
+  .house__background {
+    height: auto;
+    width: 100%; }
+    .house__background img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      vertical-align: middle; }
+  .house__gradient {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%); }
+  .house__border {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #fcf5e7; }
+  .house__crest {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    max-width: 90%;
+    margin: 0 auto; }
+    .house__crest img {
+      width: 100%;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle; }
+  .house__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: "Bluu", serif; }
+
+.lista__personajes {
+  width: 100%;
+  max-width: 1320px;
+  margin: 30px auto;
+  display: none;
+  display: flex;
+  flex-wrap: wrap; }
+
+.personaje {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-width: 450px;
+  min-width: 47%;
+  margin: 15px auto;
+  align-items: center;
+  background-color: rgba(10, 10, 10, 0.8);
+  border-radius: 6px; }
+  .personaje__fotoPerfil {
+    width: 45%;
+    text-align: center;
+    position: relative; }
+    .personaje__fotoPerfil--escudo {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      left: 50%;
+      margin-left: -25px;
+      top: 100%;
+      margin-top: -65px; }
+      .personaje__fotoPerfil--escudo.gryffindor {
+        background-image: url("../images/Gryffindor_House_Pride.svg"); }
+      .personaje__fotoPerfil--escudo.slytherin {
+        background-image: url("../images/Slytherin_House_Pride.svg"); }
+      .personaje__fotoPerfil--escudo.ravenclaw {
+        background-image: url("../images/Ravenclaw_House_Pride.svg"); }
+      .personaje__fotoPerfil--escudo.hufflepuff {
+        background-image: url("../images/Hufflepuff_House_Pride.svg"); }
+    .personaje__fotoPerfil--imagen {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 75px;
+      border: 6px solid transparent;
+      margin: 30px auto; }
+      .personaje__fotoPerfil--imagen.gryffindor {
+        background: url("../images/Gryffindor_hi-res.png") border-box;
+        background-position: center; }
+      .personaje__fotoPerfil--imagen.slytherin {
+        background: url("../images/Slytherin_hi-res.png") border-box;
+        background-position: center; }
+      .personaje__fotoPerfil--imagen.ravenclaw {
+        background: url("../images/Ravenclaw_hi-res.png") border-box;
+        background-position: center; }
+      .personaje__fotoPerfil--imagen.hufflepuff {
+        background: url("../images/Hufflepuff_hi-res.png") border-box;
+        background-position: center; }
+  .personaje__datos {
+    width: 55%;
+    height: fit-content;
+    color: #f4b223; }
+    .personaje__datos--nombreTitle {
+      font-family: "MasonSans", serif;
+      font-size: 18px; }
+    .personaje__datos--nombre {
+      font-family: "Bluu", serif;
+      font-size: 20px;
+      color: white;
+      text-transform: capitalize; }
+    .personaje__datos--generoTitle {
+      font-family: "MasonSans", serif;
+      font-size: 18px;
+      margin-top: 15px; }
+    .personaje__datos--genero {
+      font-family: "Bluu", serif;
+      font-size: 20px;
+      color: white;
+      text-transform: capitalize; }
+    .personaje__datos--casaTitle {
+      font-family: "MasonSans", serif;
+      font-size: 18px;
+      margin-top: 15px; }
+    .personaje__datos--casa {
+      font-family: "Bluu", serif;
+      font-size: 20px;
+      color: white;
+      text-transform: capitalize; }
+
+@media only screen and (max-width: 768px) {
+  .houses__header {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "empty logo logout"; }
+    .houses__header__logout {
+      justify-content: flex-end;
+      margin: 0; }
+  .houses__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: "houseA houseB" "houseC houseD";
+    row-gap: 15px;
+    column-gap: 15px; }
+    .houses__container .houseA {
+      grid-area: houseA;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseB {
+      grid-area: houseB;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseC {
+      grid-area: houseC;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseD {
+      grid-area: houseD;
+      max-width: none;
+      max-height: none; }
+  .house {
+    margin: 0; }
+  .personaje {
+    width: 80%; } }
+
+@media only screen and (max-width: 600px) {
+  .houses__header {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "empty logo logout"; }
+    .houses__header__logout {
+      justify-content: flex-end;
+      margin: 0; }
+  .houses__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: "houseA houseB" "houseC houseD";
+    row-gap: 15px;
+    column-gap: 15px; }
+    .houses__container .houseA {
+      grid-area: houseA;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseB {
+      grid-area: houseB;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseC {
+      grid-area: houseC;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseD {
+      grid-area: houseD;
+      max-width: none;
+      max-height: none; }
+  .house {
+    margin: 0; }
+    .house__title {
+      font-size: 2rem; }
+  .personaje__fotoPerfil--imagen {
+    width: 120px;
+    height: 120px; }
+  .personaje__datos--nombreTitle {
+    font-size: 16px; }
+  .personaje__datos--nombre {
+    font-size: 18px; }
+  .personaje__datos--generoTitle {
+    font-size: 16px; }
+  .personaje__datos--genero {
+    font-size: 18px; }
+  .personaje__datos--casaTitle {
+    font-size: 16px; }
+  .personaje__datos--casa {
+    font-size: 18px; } }
+
+@media only screen and (max-width: 425px) {
+  .houses__header {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "empty logo logout"; }
+    .houses__header__logout {
+      justify-content: flex-end;
+      margin: 0; }
+  .houses__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: "houseA houseB" "houseC houseD";
+    row-gap: 15px;
+    column-gap: 15px; }
+    .houses__container .houseA {
+      grid-area: houseA;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseB {
+      grid-area: houseB;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseC {
+      grid-area: houseC;
+      max-width: none;
+      max-height: none; }
+    .houses__container .houseD {
+      grid-area: houseD;
+      max-width: none;
+      max-height: none; }
+  .house {
+    margin: 0; }
+    .house__title {
+      font-size: 1.5rem; }
+  .personaje__fotoPerfil--imagen {
+    width: 120px;
+    height: 120px;
+    border: 4px solid transparent; }
+  .personaje__datos--nombreTitle {
+    font-size: 14px; }
+  .personaje__datos--nombre {
+    font-size: 16px; }
+  .personaje__datos--generoTitle {
+    font-size: 14px; }
+  .personaje__datos--genero {
+    font-size: 16px; }
+  .personaje__datos--casaTitle {
+    font-size: 14px; }
+  .personaje__datos--casa {
+    font-size: 16px; } }
+
+@media only screen and (max-width: 375px) {
+  .houses__header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo" "logout";
+    row-gap: 15px; }
+    .houses__header__logout {
+      margin: 0 auto; }
+  .houses__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "houseA" "houseB" "houseC" "houseD";
+    row-gap: 15px; }
+    .houses__container .houseA {
+      grid-area: houseA; }
+    .houses__container .houseB {
+      grid-area: houseB; }
+    .houses__container .houseC {
+      grid-area: houseC; }
+    .houses__container .houseD {
+      grid-area: houseD; }
+  .house {
+    margin: 0; }
+    .house__title {
+      font-size: 2rem; }
+  .personaje__fotoPerfil--imagen {
+    width: 100px;
+    height: 100px;
+    border: 4px solid transparent; }
+  .personaje__datos--nombreTitle {
+    font-size: 14px; }
+  .personaje__datos--nombre {
+    font-size: 16px; }
+  .personaje__datos--generoTitle {
+    font-size: 14px; }
+  .personaje__datos--genero {
+    font-size: 16px; }
+  .personaje__datos--casaTitle {
+    font-size: 14px; }
+  .personaje__datos--casa {
+    font-size: 16px; } }

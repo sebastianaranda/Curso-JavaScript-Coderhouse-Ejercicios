@@ -1,0 +1,313 @@
+@font-face {
+  font-family: "DIN Next LT Pro Regular";
+  src: url("../resources/fonts/DINNextLTPro-Regular.ttf"); }
+
+@font-face {
+  font-family: "DIN Next LT Pro Medium";
+  src: url("../resources/fonts/DINNextLTPro-Medium.ttf"); }
+
+/*---------- RESET DE CSS ----------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*---------- TERMINA RESET DE CSS ----------*/
+.nav {
+  width: 100%;
+  height: 100px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px;
+  column-gap: 30px;
+  grid-template-areas: "logo logo logo logo nav nav nav nav nav nav nav nav";
+  align-items: center;
+  justify-content: end;
+  z-index: 1; }
+  .nav__logoContainer {
+    width: 100%;
+    height: 60px;
+    grid-area: logo;
+    grid-column-start: 2; }
+  .nav__logo {
+    width: 204px;
+    height: 60px; }
+  .nav__menuDesktop {
+    width: 100%;
+    margin: 0;
+    grid-column-start: 6;
+    grid-column-end: 12; }
+    .nav__menuDesktop ul {
+      height: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .nav__menuDesktop li {
+      height: 16px;
+      list-style: none;
+      text-transform: uppercase; }
+    .nav__menuDesktop a {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      line-height: 16px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #000000; }
+
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto 450px auto auto;
+  column-gap: 30px;
+  column-width: 65px;
+  margin-top: 100px;
+  grid-template-areas: "banner banner banner banner banner banner banner banner banner banner banner banner" "marcas marcas marcas marcas marcas marcas marcas marcas marcas marcas marcas marcas" "destacados destacados destacados destacados destacados destacados destacados destacados destacados destacados destacados destacados" "promo promo promo promo promo promo promo promo promo promo promo promo" "servicios servicios servicios servicios servicios servicios servicios servicios servicios servicios servicios servicios" "footer footer footer footer footer footer footer footer footer footer footer footer"; }
+
+.banner {
+  width: 100%;
+  max-height: 300px;
+  grid-area: banner; }
+  .banner img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover; }
+
+.titulo {
+  font-family: 'DIN Next LT Pro Medium', sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  height: 29px;
+  border-left: 4px solid #000000;
+  padding-top: 5px;
+  padding-left: 15px;
+  text-transform: uppercase; }
+
+.marcas {
+  margin-top: 60px;
+  grid-area: marcas;
+  grid-column-start: 2;
+  grid-column-end: 12; }
+  .marcas__logos {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+    .marcas__logos img {
+      max-height: 120px; }
+  .marcas__alerta {
+    margin-bottom: 50px; }
+    .marcas__alerta-hidden {
+      display: none !important; }
+
+.destacados {
+  margin-top: 60px;
+  grid-area: destacados;
+  grid-column-start: 2;
+  grid-column-end: 12; }
+  .destacados__header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+  .destacados .col {
+    text-align: center; }
+  .destacados__imagenProducto {
+    width: 100%;
+    height: 350px;
+    max-width: 350px;
+    object-fit: cover;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+
+.verMas {
+  font-family: 'DIN Next LT Pro Medium', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.25px;
+  height: 36px;
+  min-width: 64px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+  .verMas i {
+    margin-right: 8px;
+    margin-bottom: 2px;
+    font-size: 14px; }
+
+.bannerPromo {
+  grid-area: promo;
+  position: relative; }
+  .bannerPromo__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: 10%; }
+  .bannerPromo__texto {
+    font-family: 'DIN Next LT Pro Medium', sans-serif;
+    color: white;
+    font-size: 72px;
+    text-align: center; }
+  .bannerPromo img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover; }
+  .bannerPromo button {
+    margin-top: 50px;
+    height: 60px;
+    width: 250px;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: 'DIN Next LT Pro Medium', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    border-radius: 4px; }
+    .bannerPromo button:hover {
+      background-color: #D2D2D2; }
+
+.servicios {
+  grid-area: servicios;
+  height: 268px;
+  display: flex;
+  align-items: center; }
+  .servicios__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    column-gap: 30px;
+    column-width: 65px;
+    grid-template-areas: " emptyLeft servicioLeft servicioLeft servicioLeft servicioLeft servicioMid servicioMid servicioMid servicioMid servicioRight servicioRight servicioRight servicioRight emptyRight"; }
+  .servicios__left, .servicios__mid, .servicios__right {
+    grid-area: servicioLeft;
+    height: 168px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+    border-radius: 6px; }
+  .servicios__mid {
+    grid-area: servicioMid; }
+  .servicios__right {
+    grid-area: servicioRight; }
+  .servicios img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 30px; }
+  .servicios p {
+    font-family: 'DIN Next LT Pro Regular', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-align: center; }
+
+.footer {
+  grid-area: footer;
+  height: 220px;
+  margin: 0 6%; }
+  .footer__separator {
+    color: #000000;
+    margin: 0; }
+  .footer__container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+  .footer__menu {
+    width: 135px;
+    height: 220px; }
+    .footer__menu ul {
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      font-family: 'Poppins', sans-serif; }
+      .footer__menu ul li {
+        height: 12px;
+        list-style: none;
+        text-transform: uppercase;
+        margin-top: 20px; }
+        .footer__menu ul li.title {
+          height: 48px;
+          margin: 0;
+          font-size: 14px;
+          line-height: 48px;
+          font-weight: 600; }
+        .footer__menu ul li a {
+          font-size: 12px;
+          line-height: 12px;
+          text-decoration: none;
+          font-weight: 300;
+          color: #000000; }
+          .footer__menu ul li a:hover {
+            font-weight: 500; }
+  .footer__logo {
+    width: 200px;
+    height: 59px; }
+  .footer__socialMedia {
+    width: 132px;
+    height: 24px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+    .footer__socialMedia .icono {
+      font-size: 24px;
+      color: #000000; }
+      .footer__socialMedia .icono:hover {
+        color: #8A8A8A; }
